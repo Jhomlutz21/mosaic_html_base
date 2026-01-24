@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mosaic HTML Demo - Single Product</title>
+    <title>Mosaic HTML Demo - Meetups Post</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./css/vendors/flatpickr.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
@@ -110,11 +110,11 @@
                                 </div>
                             </li>
                             <!-- E-Commerce -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
-                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
+                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M9 6.855A3.502 3.502 0 0 0 8 0a3.5 3.5 0 0 0-1 6.855v1.656L5.534 9.65a3.5 3.5 0 1 0 1.229 1.578L8 10.267l1.238.962a3.5 3.5 0 1 0 1.229-1.578L9 8.511V6.855ZM6.5 3.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm4.803 8.095c.005-.005.01-.01.013-.016l.012-.016a1.5 1.5 0 1 1-.025.032ZM3.5 11c.474 0 .897.22 1.171.563l.013.016.013.017A1.5 1.5 0 1 1 3.5 11Z" />
                                             </svg>    
                                             <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">E-Commerce</span>
@@ -155,7 +155,7 @@
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-violet-500 transition truncate" href="product.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="product.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Single Product</span>
                                             </a>
                                         </li>
@@ -183,11 +183,11 @@
                                 </div>
                             </li>
                             <!-- Community -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
+                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z" />
                                             </svg>
                                             <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Community</span>
@@ -238,7 +238,7 @@
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="meetups-post.html">
+                                            <a class="block text-violet-500 transition truncate" href="meetups-post.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups - Post</span>
                                             </a>
                                         </li>
@@ -1065,365 +1065,198 @@
                 <div class="px-4 sm:px-6 lg:px-8 py-8 w-full">
 
                     <!-- Page content -->
-                    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
+                    <div class="max-w-5xl mx-auto">
 
-                        <!-- Content -->
-                        <div>
-                            <div class="mb-3">
-                                <a class="text-sm font-medium text-violet-500 hover:text-violet-600 dark:hover:text-violet-400" href="#0">&lt;- Back To Listing</a>
-                            </div>
-                            <header class="mb-4">
-                                <!-- Title -->
-                                <h1 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold mb-2">Front-End Learning: Hands-On HTML & CSS In Real Web Apps</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</p>
-                            </header>
+                        <div class="flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
 
-                            <!-- Meta -->
-                            <div class="space-y-3 sm:flex sm:items-center sm:justify-between sm:space-y-0 mb-6">
-                                <!-- Author -->
-                                <div class="flex items-center sm:mr-4">
-                                    <a class="block mr-2 shrink-0" href="#0">
-                                        <img class="rounded-full" src="./images/user-32-07.jpg" width="32" height="32" alt="User 04" />
-                                    </a>
-                                    <a class="block text-sm font-semibold text-gray-800 dark:text-gray-100 whitespace-nowrap" href="#0">
-                                        Simona Lürwer
-                                    </a>
+                            <!-- Content -->
+                            <div class="grow">
+                                <div class="space-y-6">
+                                    <!-- Item 1 -->
+                                    <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                                        <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                                            <!-- Header: Left side -->
+                                            <div>
+                                                <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Informacion del sistema</div>
+                                                <h1 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">Atlas Core EA</h1>
+                                                <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-3">Descripcion detallada</div>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                                    Atlas Core EA es un sistema automatizado enfocado en ejecucion consistente, control de riesgo por cuenta y reglas estables de operativa.
+                                                </p>
+                                            </div>
+                                            <!-- Header: Right side -->
+                                            <div class="flex flex-wrap items-center gap-2 text-xs">
+                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">EA ID: ATLAS-CORE</span>
+                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Tipo: EA Robot</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Section: System details -->
+                                        <div class="mt-6 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
+                                            <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Detalles del sistema</div>
+                                            <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                                                <div class="flex items-center justify-between text-sm">
+                                                    <span class="text-gray-500 dark:text-gray-400">Tiers permitidos</span>
+                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Starter, Pro, Elite</span>
+                                                </div>
+                                                <div class="flex items-center justify-between text-sm">
+                                                    <span class="text-gray-500 dark:text-gray-400">Trial habilitado</span>
+                                                    <span class="font-medium text-gray-800 dark:text-gray-100">No</span>
+                                                </div>
+                                                <div class="flex items-center justify-between text-sm">
+                                                    <span class="text-gray-500 dark:text-gray-400">Guia EN</span>
+                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
+                                                </div>
+                                                <div class="flex items-center justify-between text-sm">
+                                                    <span class="text-gray-500 dark:text-gray-400">Guia ES</span>
+                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
+                                                </div>
+                                                <div class="flex items-center justify-between text-sm">
+                                                    <span class="text-gray-500 dark:text-gray-400">Archivo EA</span>
+                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Bundle activo</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <!-- Item 3 -->
+                                    <article class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl">
+                                        <!-- Header: Title -->
+                                        <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+                                            <h2 class="font-semibold text-gray-800 dark:text-gray-100">Ultimos ingresos del sistema</h2>
+                                        </header>
+                                        <!-- Section: Summary -->
+                                        <div class="px-5 py-3">
+                                            <div class="flex flex-wrap justify-between items-end gap-y-2 gap-x-4">
+                                                <div class="flex items-center">
+                                                    <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">$1,284.60</div>
+                                                    <div class="text-sm text-gray-500 dark:text-gray-400"><span class="font-medium text-gray-800 dark:text-gray-100">USD 62.4</span> promedio diario</div>
+                                                </div>
+                                                <div id="fintech-card-01-legend" class="grow mb-1">
+                                                    <ul class="flex flex-wrap gap-x-4 sm:justify-end"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Chart: Income -->
+                                        <!-- Chart built with Chart.js 3 -->
+                                        <!-- Check out src/js/fintech-charts.js for config -->
+                                        <div class="grow">
+                                            <!-- Change the height attribute to adjust the chart height -->
+                                            <canvas id="fintech-card-01" width="560" height="230"></canvas>
+                                        </div>
+                                    </article>
                                 </div>
-                                <!-- Right side -->
-                                <div class="flex flex-wrap items-center sm:justify-end space-x-4">
-                                    <!-- Tag -->
-                                    <div class="inline-flex items-center text-xs font-medium text-gray-100 dark:text-gray-300 bg-gray-900/60 dark:bg-gray-800/60 rounded-full text-center px-2 py-0.5">
-                                        <svg class="w-3 h-3 shrink-0 fill-current text-yellow-500 mr-1" viewBox="0 0 12 12">
-                                            <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
-                                        </svg>
-                                        <span>Special Offer</span>
+                            </div>
+
+                            <!-- Sidebar -->
+                            <aside class="mt-6 lg:mt-0 lg:w-80 space-y-6">
+                                <!-- Item 2 -->
+                                <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                                    <!-- Header: Title -->
+                                    <div class="flex items-center justify-between">
+                                        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Guia del sistema</h2>
                                     </div>
-                                    <!-- Rating -->
-                                    <div class="flex items-center space-x-2 mr-2">
-                                        <!-- Stars -->
-                                        <div class="flex space-x-1">
-                                            <button>
-                                                <span class="sr-only">1 star</span>
-                                                <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                </svg>
-                                            </button>
-                                            <button>
-                                                <span class="sr-only">2 stars</span>
-                                                <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                </svg>
-                                            </button>
-                                            <button>
-                                                <span class="sr-only">3 stars</span>
-                                                <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                </svg>
-                                            </button>
-                                            <button>
-                                                <span class="sr-only">4 stars</span>
-                                                <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                </svg>
-                                            </button>
-                                            <button>
-                                                <span class="sr-only">5 stars</span>
-                                                <svg class="fill-current text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <!-- Rate -->
-                                        <div class="inline-flex text-sm font-medium text-yellow-600">4.2</div>
+                                    <!-- Section: Guide -->
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
+                                        Guia general para instalacion, configuracion y validacion del EA.
+                                    </p>
+                                    <!-- Section: Actions -->
+                                    <div class="mt-4 grid gap-2 sm:grid-cols-2">
+                                        <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">Ver guia</button>
+                                        <button class="btn bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600" type="button">Descargar guia</button>
                                     </div>
-                                </div>
-                            </div>
+                                </article>
 
-                            <!-- Image -->
-                            <figure class="mb-6">
-                                <img class="w-full rounded-xs" src="./images/product-image.jpg" width="640" height="360" alt="Product" />
-                            </figure>
-
-                            <!-- Product content -->
-                            <div>
-                                <h2 class="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-2">Overview</h2>
-                                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua u t enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <p class="mb-6">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <ul class="list-disc list-inside space-y-1 mb-6">
-                                    <li>E-commerce: Better lorem ipsum generator.</li>
-                                    <li>Booking: Lorem ipsum post generator.</li>
-                                    <li>Retail: Better lorem ipsum generator.</li>
-                                    <li>Services: Better lorem ipsum generator.</li>
-                                </ul>
-                                <blockquote class="italic mb-6">
-                                    “Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”
-                                </blockquote>
-                            </div>
-
-                            <hr class="my-6 border-t border-gray-100 dark:border-gray-700/60" />
-
-                            <hr class="my-6 border-t border-gray-100 dark:border-gray-700/60" />
-
-                            <!-- Related -->
-                            <div>
-                                <h2 class="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-2">Frequently Bought Together</h2>
-                                <ul class="space-y-8 sm:space-y-5 my-6">
-                                    <!-- Related item -->
-                                    <li class="sm:flex items-center">
-                                        <a class="block mb-4 sm:mb-0 mr-5 md:w-32 xl:w-auto shrink-0" href="#0">
-                                            <img class="rounded-xs" src="./images/related-product-01.jpg" width="200" height="142" alt="Product 01" />
-                                        </a>
-                                        <div class="grow">
-                                            <a href="#0">
-                                                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1">The Complete Front-End Development Course!</h3>
-                                            </a>
-                                            <div class="text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</div>
-                                            <!-- Rating and price -->
-                                            <div class="flex flex-wrap items-center space-x-2">
-                                                <!-- Rating -->
-                                                <div class="flex items-center space-x-2">
-                                                    <!-- Stars -->
-                                                    <div class="flex space-x-1">
-                                                        <button>
-                                                            <span class="sr-only">1 star</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">2 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">3 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">4 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">5 stars</span>
-                                                            <svg class="fill-current text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                    <!-- Rate -->
-                                                    <div class="inline-flex text-sm font-medium text-yellow-600">4.2</div>
-                                                </div>
-                                                <div class="text-gray-400 dark:text-gray-600">·</div>
-                                                <!-- Price -->
-                                                <div>
-                                                    <div class="inline-flex text-sm font-medium bg-green-500/20 text-green-700 rounded-full text-center px-2 py-0.5">$89.00</div>
-                                                </div>
-                                            </div>
+                                <!-- Item 4 -->
+                                <article class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl">
+                                    <!-- Header: Title -->
+                                    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+                                        <h2 class="font-semibold text-gray-800 dark:text-gray-100">Licencias activas</h2>
+                                    </header>
+                                    <!-- Section: Usage -->
+                                    <div class="px-5 py-3">
+                                        <div class="text-sm italic mb-2">Uso de licencias</div>
+                                        <div class="flex items-center">
+                                            <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">2 de 3</div>
+                                            <div class="text-sm"><span class="font-medium text-yellow-600">67%</span></div>
                                         </div>
-                                    </li>
-                                    <!-- Related item -->
-                                    <li class="sm:flex items-center">
-                                        <a class="block mb-4 sm:mb-0 mr-5 md:w-32 xl:w-auto shrink-0" href="#0">
-                                            <img class="rounded-xs" src="./images/related-product-02.jpg" width="200" height="142" alt="Product 02" />
-                                        </a>
-                                        <div class="grow">
-                                            <a href="#0">
-                                                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1">Web Development Ultimate Course 2024</h3>
-                                            </a>
-                                            <div class="text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</div>
-                                            <!-- Rating and price -->
-                                            <div class="flex flex-wrap items-center space-x-2">
-                                                <!-- Rating -->
-                                                <div class="flex items-center space-x-2">
-                                                    <!-- Stars -->
-                                                    <div class="flex space-x-1">
-                                                        <button>
-                                                            <span class="sr-only">1 star</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">2 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">3 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">4 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">5 stars</span>
-                                                            <svg class="fill-current text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                    <!-- Rate -->
-                                                    <div class="inline-flex text-sm font-medium text-yellow-600">4.2</div>
-                                                </div>
-                                                <div class="text-gray-400 dark:text-gray-600">·</div>
-                                                <!-- Price -->
-                                                <div>
-                                                    <div class="inline-flex text-sm font-medium bg-green-500/20 text-green-700 rounded-full text-center px-2 py-0.5">$89.00</div>
-                                                </div>
-                                            </div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">Estado activo vs expiradas</div>
+                                    </div>
+                                    <!-- Chart: License usage -->
+                                    <!-- Chart built with Chart.js 3 -->
+                                    <!-- Check out src/js/fintech-charts.js for config -->
+                                    <div class="grow">
+                                        <!-- Change the height attribute to adjust the chart height -->
+                                        <canvas id="fintech-card-07" width="389" height="262"></canvas>
+                                    </div>
+                                    <!-- Section: License key -->
+                                    <div class="px-5 pb-5 pt-4 border-t border-gray-100 dark:border-gray-700/60">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Clave completa</div>
+                                        <div class="mt-1 font-mono text-sm text-gray-800 dark:text-gray-100">EA-2894-7712-5530-9032</div>
+                                        <div class="mt-3">
+                                            <button
+                                                class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700/60 text-gray-600 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
+                                                type="button"
+                                                x-data="{
+                                                    copied: false,
+                                                    license: 'EA-2894-7712-5530-9032',
+                                                    timeoutId: null,
+                                                    copyLicense() {
+                                                        if (navigator.clipboard) {
+                                                            navigator.clipboard.writeText(this.license).catch(() => {});
+                                                        }
+                                                        this.copied = true;
+                                                        clearTimeout(this.timeoutId);
+                                                        this.timeoutId = setTimeout(() => this.copied = false, 4000);
+                                                    }
+                                                }"
+                                                @click="copyLicense()"
+                                                aria-live="polite"
+                                            >
+                                                <span x-text="copied ? 'Copiado' : 'Copiar licencia'"></span>
+                                            </button>
                                         </div>
-                                    </li>
-                                    <!-- Related item -->
-                                    <li class="sm:flex items-center">
-                                        <a class="block mb-4 sm:mb-0 mr-5 md:w-32 xl:w-auto shrink-0" href="#0">
-                                            <img class="rounded-xs" src="./images/related-product-03.jpg" width="200" height="142" alt="Product 03" />
-                                        </a>
-                                        <div class="grow">
-                                            <a href="#0">
-                                                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1">Full-Stack JavaScript Course!</h3>
-                                            </a>
-                                            <div class="text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</div>
-                                            <!-- Rating and price -->
-                                            <div class="flex flex-wrap items-center space-x-2">
-                                                <!-- Rating -->
-                                                <div class="flex items-center space-x-2">
-                                                    <!-- Stars -->
-                                                    <div class="flex space-x-1">
-                                                        <button>
-                                                            <span class="sr-only">1 star</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">2 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">3 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">4 stars</span>
-                                                            <svg class="fill-current text-yellow-500" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                        <button>
-                                                            <span class="sr-only">5 stars</span>
-                                                            <svg class="fill-current text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M10 5.934L8 0 6 5.934H0l4.89 3.954L2.968 16 8 12.223 13.032 16 11.11 9.888 16 5.934z" />
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                    <!-- Rate -->
-                                                    <div class="inline-flex text-sm font-medium text-yellow-600">4.2</div>
-                                                </div>
-                                                <div class="text-gray-400 dark:text-gray-600">·</div>
-                                                <!-- Price -->
-                                                <div>
-                                                    <div class="inline-flex text-sm font-medium bg-green-500/20 text-green-700 rounded-full text-center px-2 py-0.5">$89.00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!-- Load More -->
-                                <div class="text-center">
-                                    <button class="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300">Load More Stuff</button>
-                                </div>
-                            </div>
+                                    </div>
+                                </article>
+                            </aside>
 
-                            <hr class="my-6 border-t border-gray-100 dark:border-gray-700/60" />
-                            
                         </div>
 
-                        <!-- Sidebar -->
-                        <div>
-                            <div class="bg-white dark:bg-gray-800 p-5 shadow-xs rounded-xl lg:w-72 xl:w-80">
-                                <!-- Section: Header -->
-                                <div class="pb-4 mb-4 border-b border-gray-100 dark:border-gray-700/60">
-                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Producto</div>
-                                    <div class="flex items-start justify-between gap-3 mt-1">
-                                        <h3 class="text-lg font-bold text-gray-800 dark:text-gray-100">Curso de Trading Momentum</h3>
-                                        <span class="text-sm font-semibold text-gray-800 dark:text-gray-100">$69.00</span>
-                                    </div>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Programa completo para dominar entradas, gestion y salidas.</p>
+                        <!-- Item 5 -->
+                        <article class="mt-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Adons del EA</h2>
+                            <!-- Section: Progreso de Adons -->
+                            <div class="mt-4">
+                                <div class="flex items-center justify-between">
+                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso de Adons</div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2/3</div>
                                 </div>
-                                <!-- Section: Adons del producto -->
-                                <div class="pb-4 mb-4 border-b border-gray-100 dark:border-gray-700/60">
-                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Adons del producto</div>
-                                    <div class="mt-2 grid grid-cols-3 gap-2 text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide">
-                                        <span>Adon</span>
-                                        <span class="text-center">Precio</span>
-                                        <span class="text-right">Accion</span>
-                                    </div>
-                                    <div class="mt-2 space-y-2 text-sm">
-                                        <div class="grid grid-cols-3 items-center gap-2">
-                                            <span class="text-gray-700 dark:text-gray-400">Plantilla de riesgo</span>
-                                            <span class="text-center text-gray-700 dark:text-gray-400">$12.00</span>
-                                            <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">
-                                                Añadir
-                                            </button>
-                                        </div>
-                                        <div class="grid grid-cols-3 items-center gap-2">
-                                            <span class="text-gray-700 dark:text-gray-400">Checklist de entradas</span>
-                                            <span class="text-center text-gray-700 dark:text-gray-400">$9.00</span>
-                                            <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
-                                                Añadido
-                                            </button>
-                                        </div>
-                                        <div class="grid grid-cols-3 items-center gap-2">
-                                            <span class="text-gray-700 dark:text-gray-400">Guia de backtest</span>
-                                            <span class="text-center text-gray-700 dark:text-gray-400">$15.00</span>
-                                            <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
-                                                Añadido
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 border-t border-gray-100 dark:border-gray-700/60 pt-3 text-sm">
-                                        <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
-                                            <span>Subtotal adons</span>
-                                            <span>$36.00</span>
-                                        </div>
-                                        <div class="flex items-center justify-between font-semibold text-gray-800 dark:text-gray-100 mt-1">
-                                            <span>Total final</span>
-                                            <span>$105.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        <div class="flex items-center justify-between text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">
-                                            <span>Progreso de adons</span>
-                                            <span class="normal-case text-gray-500 dark:text-gray-400">2/3</span>
-                                        </div>
-                                        <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
-                                            <div class="h-2 rounded-full bg-violet-500" style="width: 67%;"></div>
-                                        </div>
-                                    </div>
+                                <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                    <div class="h-2 rounded-full bg-violet-500" style="width: 67%;"></div>
                                 </div>
-                                <!-- Section: Comprar -->
-                                <div class="mb-3">
-                                    <button class="btn w-full bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">Comprar ahora - $105.00</button>
-                                </div>
-                                <!-- Section: Legal -->
-                                <div class="text-xs text-gray-500 italic text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a class="underline hover:no-underline" href="#0">Terms</a>.</div>
+                                <!-- Section: List -->
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Indicador Trend Filter</span>
+                                        <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">
+                                            Adquirir
+                                        </button>
+                                    </li>
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Guia de optimizacion</span>
+                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
+                                            Adquirido
+                                        </button>
+                                    </li>
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Plantilla de gestion de riesgo</span>
+                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
+                                            Adquirido
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
+                        </article>
 
                     </div>
 
@@ -1440,3 +1273,4 @@
 </body>
 
 </html>
+
