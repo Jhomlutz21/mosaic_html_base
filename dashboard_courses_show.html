@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mosaic HTML Demo - Meetups Post</title>
+    <title>Mosaic HTML Demo - Course</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="./css/vendors/flatpickr.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
     <script>
         if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
@@ -71,11 +70,11 @@
                         </h3>
                         <ul class="mt-3">
                             <!-- Dashboard -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
+                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M5.936.278A7.983 7.983 0 0 1 8 0a8 8 0 1 1-8 8c0-.722.104-1.413.278-2.064a1 1 0 1 1 1.932.516A5.99 5.99 0 0 0 2 8a6 6 0 1 0 6-6c-.53 0-1.045.076-1.548.21A1 1 0 1 1 5.936.278Z" />
                                                 <path d="M6.068 7.482A2.003 2.003 0 0 0 8 10a2 2 0 1 0-.518-3.932L3.707 2.293a1 1 0 0 0-1.414 1.414l3.775 3.775Z" />
                                             </svg> 
@@ -97,7 +96,7 @@
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="analytics.html">
+                                            <a class="block text-violet-500 transition truncate" href="analytics.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Analytics</span>
                                             </a>
                                         </li>
@@ -183,11 +182,11 @@
                                 </div>
                             </li>
                             <!-- Community -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
-                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
+                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z" />
                                             </svg>
                                             <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Community</span>
@@ -238,7 +237,7 @@
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-violet-500 transition truncate" href="meetups-post.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="meetups-post.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups - Post</span>
                                             </a>
                                         </li>
@@ -1061,198 +1060,254 @@
                 </div>
             </header>
             
-            <main class="grow">
-                <div class="px-4 sm:px-6 lg:px-8 py-8 w-full">
+                        <main class="grow">
+                <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto">
 
-                    <!-- Page content -->
-                    <div class="max-w-5xl mx-auto">
+                    <!-- Page header -->
+                    <div class="sm:flex sm:justify-between sm:items-center mb-6">
+                        <div class="mb-4 sm:mb-0">
+                            <div class="mb-4">
+                                <a class="btn-sm px-3 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300" href="dashboard_Courses_index.html">
+                                    <svg class="fill-current text-gray-400 dark:text-gray-500 mr-2" width="7" height="12" viewBox="0 0 7 12">
+                                        <path d="M5.4.6 6.8 2l-4 4 4 4-1.4 1.4L0 6z" />
+                                    </svg>
+                                    <span>Regresar a Cursos</span>
+                                </a>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">
+                                <span>Curso</span>
+                                <span class="text-gray-300 dark:text-gray-600">/</span>
+                                <span>Trading</span>
+                            </div>
+                            <h1 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold mt-2">
+                                Introduccion al Trading Profesional
+                            </h1>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 text-xs">
+                            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 font-medium px-2.5 py-1">Curso publicado</span>
+                            <span class="inline-flex items-center rounded-full bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300 font-medium px-2.5 py-1">Acceso activo</span>
+                        </div>
+                    </div>
 
-                        <div class="flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
+                    <!-- Cards -->
+                    <div class="grid grid-cols-12 gap-6">
 
-                            <!-- Content -->
-                            <div class="grow">
-                                <div class="space-y-6">
-                                    <!-- Item 1 -->
-                                    <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
-                                        <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                                            <!-- Header: Left side -->
-                                            <div>
-                                                <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Informacion del sistema</div>
-                                                <h1 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">Atlas Core EA</h1>
-                                                <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-3">Descripcion detallada</div>
-                                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                                                    Atlas Core EA es un sistema automatizado enfocado en ejecucion consistente, control de riesgo por cuenta y reglas estables de operativa.
-                                                </p>
-                                            </div>
-                                            <!-- Header: Right side -->
-                                            <div class="flex flex-wrap items-center gap-2 text-xs">
-                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">EA ID: ATLAS-CORE</span>
-                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Tipo: EA Robot</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Section: System details -->
-                                        <div class="mt-6 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
-                                            <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Detalles del sistema</div>
-                                            <div class="mt-3 grid gap-3 sm:grid-cols-2">
-                                                <div class="flex items-center justify-between text-sm">
-                                                    <span class="text-gray-500 dark:text-gray-400">Tiers permitidos</span>
-                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Starter, Pro, Elite</span>
-                                                </div>
-                                                <div class="flex items-center justify-between text-sm">
-                                                    <span class="text-gray-500 dark:text-gray-400">Trial habilitado</span>
-                                                    <span class="font-medium text-gray-800 dark:text-gray-100">No</span>
-                                                </div>
-                                                <div class="flex items-center justify-between text-sm">
-                                                    <span class="text-gray-500 dark:text-gray-400">Guia EN</span>
-                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
-                                                </div>
-                                                <div class="flex items-center justify-between text-sm">
-                                                    <span class="text-gray-500 dark:text-gray-400">Guia ES</span>
-                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
-                                                </div>
-                                                <div class="flex items-center justify-between text-sm">
-                                                    <span class="text-gray-500 dark:text-gray-400">Archivo EA</span>
-                                                    <span class="font-medium text-gray-800 dark:text-gray-100">Bundle activo</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-
-                                    <!-- Item 3 -->
-                                    <article class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl">
-                                        <!-- Header: Title -->
-                                        <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
-                                            <h2 class="font-semibold text-gray-800 dark:text-gray-100">Ultimos ingresos del sistema</h2>
-                                        </header>
-                                        <!-- Section: Summary -->
-                                        <div class="px-5 py-3">
-                                            <div class="flex flex-wrap justify-between items-end gap-y-2 gap-x-4">
-                                                <div class="flex items-center">
-                                                    <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">$1,284.60</div>
-                                                    <div class="text-sm text-gray-500 dark:text-gray-400"><span class="font-medium text-gray-800 dark:text-gray-100">USD 62.4</span> promedio diario</div>
-                                                </div>
-                                                <div id="fintech-card-01-legend" class="grow mb-1">
-                                                    <ul class="flex flex-wrap gap-x-4 sm:justify-end"></ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Chart: Income -->
-                                        <!-- Chart built with Chart.js 3 -->
-                                        <!-- Check out src/js/fintech-charts.js for config -->
-                                        <div class="grow">
-                                            <!-- Change the height attribute to adjust the chart height -->
-                                            <canvas id="fintech-card-01" width="560" height="230"></canvas>
-                                        </div>
-                                    </article>
+                        <!-- Card 1 -->
+                        <article class="col-span-full xl:col-span-8 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 1: Course Summary -->
+                            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                                <div>
+                                    <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Informacion general</div>
+                                    <h2 class="text-xl md:text-2xl text-gray-800 dark:text-gray-100 font-semibold">
+                                        Introduccion al Trading Profesional
+                                    </h2>
+                                    <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-3">Resumen del curso</div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                        Aprende los fundamentos del mercado, la lectura de tendencias y la gestion de riesgo con ejemplos reales.
+                                    </p>
+                                    <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-4">Que veras en este curso</div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                        Conceptos clave, estructura del mercado, estrategias de entrada y un plan completo para evaluar resultados.
+                                    </p>
+                                </div>
+                                <div class="flex flex-wrap items-center gap-2 text-xs">
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Nivel: Principiante</span>
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Idioma: ES</span>
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Status: Publicado</span>
                                 </div>
                             </div>
 
-                            <!-- Sidebar -->
-                            <aside class="mt-6 lg:mt-0 lg:w-80 space-y-6">
-                                <!-- Item 2 -->
-                                <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
-                                    <!-- Header: Title -->
-                                    <div class="flex items-center justify-between">
-                                        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Guia del sistema</h2>
+                            <div class="mt-6 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
+                                <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Detalles del curso</div>
+                                <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-500 dark:text-gray-400">Modulos</span>
+                                        <span class="font-medium text-gray-800 dark:text-gray-100">4</span>
                                     </div>
-                                    <!-- Section: Guide -->
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
-                                        Guia general para instalacion, configuracion y validacion del EA.
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-500 dark:text-gray-400">Lecciones</span>
+                                        <span class="font-medium text-gray-800 dark:text-gray-100">8</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-500 dark:text-gray-400">Duracion total</span>
+                                        <span class="font-medium text-gray-800 dark:text-gray-100">1h 55m</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-500 dark:text-gray-400">Acceso</span>
+                                        <span class="font-medium text-emerald-700 dark:text-emerald-300">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-sm text-emerald-700 dark:text-emerald-300">Tienes acceso a este curso</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="col-span-full xl:col-span-4 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 2: Course Progress -->
+                            <div class="flex flex-col gap-4">
+                                <div>
+                                    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Progreso del curso</h2>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                        Continua donde lo dejaste y completa los modulos a tu ritmo.
                                     </p>
-                                    <!-- Section: Actions -->
-                                    <div class="mt-4 grid gap-2 sm:grid-cols-2">
-                                        <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">Ver guia</button>
-                                        <button class="btn bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600" type="button">Descargar guia</button>
-                                    </div>
-                                </article>
-
-                                <!-- Item 4 -->
-                                <article class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl">
-                                    <!-- Header: Title -->
-                                    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
-                                        <h2 class="font-semibold text-gray-800 dark:text-gray-100">Licencias activas</h2>
-                                    </header>
-                                    <!-- Section: Usage -->
-                                    <div class="px-5 py-3">
-                                        <div class="text-sm italic mb-2">Uso de licencias</div>
-                                        <div class="flex items-center">
-                                            <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">2 de 3</div>
-                                            <div class="text-sm"><span class="font-medium text-yellow-600">67%</span></div>
-                                        </div>
-                                        <div class="text-sm text-gray-500 dark:text-gray-400">Estado activo vs expiradas</div>
-                                    </div>
-                                    <!-- Chart: License usage -->
-                                    <!-- Chart built with Chart.js 3 -->
-                                    <!-- Check out src/js/fintech-charts.js for config -->
-                                    <div class="grow">
-                                        <!-- Change the height attribute to adjust the chart height -->
-                                        <canvas id="fintech-card-07" width="389" height="262"></canvas>
-                                    </div>
-                                    <!-- Section: License key -->
-                                    <div class="px-5 pb-5 pt-4 border-t border-gray-100 dark:border-gray-700/60">
-                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Clave completa</div>
-                                        <div class="mt-1 font-mono text-sm text-gray-800 dark:text-gray-100">EA-2894-7712-5530-9032</div>
-                                        <div class="mt-3">
-                                            <button
-                                                class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700/60 text-gray-600 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
-                                                type="button"
-                                                x-data="{
-                                                    copied: false,
-                                                    license: 'EA-2894-7712-5530-9032',
-                                                    timeoutId: null,
-                                                    copyLicense() {
-                                                        if (navigator.clipboard) {
-                                                            navigator.clipboard.writeText(this.license).catch(() => {});
-                                                        }
-                                                        this.copied = true;
-                                                        clearTimeout(this.timeoutId);
-                                                        this.timeoutId = setTimeout(() => this.copied = false, 4000);
-                                                    }
-                                                }"
-                                                @click="copyLicense()"
-                                                aria-live="polite"
-                                            >
-                                                <span x-text="copied ? 'Copiado' : 'Copiar licencia'"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </article>
-                            </aside>
-
-                        </div>
-
-                        <!-- Item 5 -->
-                        <article class="mt-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
-                            <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Adons del EA</h2>
-                            <!-- Section: Progreso de Adons -->
-                            <div class="mt-4">
-                                <div class="flex items-center justify-between">
-                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso de Adons</div>
-                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2/3</div>
                                 </div>
-                                <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
-                                    <div class="h-2 rounded-full bg-violet-500" style="width: 67%;"></div>
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso general</div>
+                                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400">64%</div>
+                                    </div>
+                                    <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                        <div class="h-2 rounded-full bg-violet-500" style="width: 64%;"></div>
+                                    </div>
+                                    <div class="mt-2 text-sm text-gray-500 dark:text-gray-400">Ultima leccion vista: Introduccion a la gestion de riesgo</div>
                                 </div>
-                                <!-- Section: List -->
-                                <ul class="mt-4 space-y-2">
-                                    <li class="flex items-center justify-between gap-3">
-                                        <span class="text-sm text-gray-700 dark:text-gray-400">Indicador Trend Filter</span>
-                                        <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">
-                                            Adquirir
-                                        </button>
+                                <div class="pt-2">
+                                    <a class="btn w-full bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" href="#0">
+                                        Continuar
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 3: Module 1 -->
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Modulo 1</div>
+                                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Fundamentos del mercado</h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                            Conoce la estructura del mercado y los conceptos base para operar con claridad.
+                                        </p>
+                                    </div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2 lecciones</div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso del modulo</div>
+                                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400">50%</div>
+                                    </div>
+                                    <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                        <div class="h-2 rounded-full bg-violet-500" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <ul class="mt-2 space-y-2">
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">1. Estructura del mercado</span>
+                                        <span class="text-gray-500 dark:text-gray-400">12:00</span>
                                     </li>
-                                    <li class="flex items-center justify-between gap-3">
-                                        <span class="text-sm text-gray-700 dark:text-gray-400">Guia de optimizacion</span>
-                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
-                                            Adquirido
-                                        </button>
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">2. Ciclos y tendencias</span>
+                                        <span class="text-gray-500 dark:text-gray-400">14:00</span>
                                     </li>
-                                    <li class="flex items-center justify-between gap-3">
-                                        <span class="text-sm text-gray-700 dark:text-gray-400">Plantilla de gestion de riesgo</span>
-                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
-                                            Adquirido
-                                        </button>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 4: Module 2 -->
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Modulo 2</div>
+                                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Analisis tecnico aplicado</h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                            Aprende a identificar zonas clave y configurar escenarios de entrada y salida.
+                                        </p>
+                                    </div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2 lecciones</div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso del modulo</div>
+                                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400">35%</div>
+                                    </div>
+                                    <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                        <div class="h-2 rounded-full bg-violet-500" style="width: 35%;"></div>
+                                    </div>
+                                </div>
+                                <ul class="mt-2 space-y-2">
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">1. Zonas de oferta y demanda</span>
+                                        <span class="text-gray-500 dark:text-gray-400">15:00</span>
+                                    </li>
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">2. Confirmaciones de entrada</span>
+                                        <span class="text-gray-500 dark:text-gray-400">13:00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 5: Module 3 -->
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Modulo 3</div>
+                                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Gestion de riesgo</h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                            Define reglas claras de riesgo y aprende a proteger el capital en cada operacion.
+                                        </p>
+                                    </div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2 lecciones</div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso del modulo</div>
+                                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400">20%</div>
+                                    </div>
+                                    <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                        <div class="h-2 rounded-full bg-violet-500" style="width: 20%;"></div>
+                                    </div>
+                                </div>
+                                <ul class="mt-2 space-y-2">
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">1. Control de perdida diaria</span>
+                                        <span class="text-gray-500 dark:text-gray-400">16:00</span>
+                                    </li>
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">2. Tamano de posicion</span>
+                                        <span class="text-gray-500 dark:text-gray-400">10:00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Section 6: Module 4 -->
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Modulo 4</div>
+                                        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Plan de ejecucion</h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                            Crea un plan de accion, registra tus resultados y mejora con retroalimentacion.
+                                        </p>
+                                    </div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2 lecciones</div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso del modulo</div>
+                                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400">0%</div>
+                                    </div>
+                                    <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                        <div class="h-2 rounded-full bg-violet-500" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                                <ul class="mt-2 space-y-2">
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">1. Plan diario de trading</span>
+                                        <span class="text-gray-500 dark:text-gray-400">18:00</span>
+                                    </li>
+                                    <li class="flex items-center justify-between text-sm">
+                                        <span class="text-gray-700 dark:text-gray-300">2. Reporte y evaluacion</span>
+                                        <span class="text-gray-500 dark:text-gray-400">17:00</span>
                                     </li>
                                 </ul>
                             </div>
@@ -1273,4 +1328,3 @@
 </body>
 
 </html>
-

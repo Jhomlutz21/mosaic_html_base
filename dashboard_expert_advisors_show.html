@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mosaic HTML Demo - EA Detalle</title>
+    <title>Mosaic HTML Demo - Home</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./css/vendors/flatpickr.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
@@ -39,11 +39,23 @@
         <!-- Sidebar -->
         <div class="min-w-fit">
             <!-- Sidebar backdrop (mobile only) -->
-            <div class="fixed inset-0 bg-gray-900/30 z-40 lg:hidden lg:z-auto transition-opacity duration-200" :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" aria-hidden="true" x-cloak></div>
-        
+            <div
+                class="fixed inset-0 bg-gray-900/30 z-40 lg:hidden lg:z-auto transition-opacity duration-200"
+                :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'"
+                aria-hidden="true"
+                x-cloak
+            ></div>
+
             <!-- Sidebar -->
-            <div id="sidebar" class="flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-white dark:bg-gray-800 shadow-xs rounded-r-2xl p-4 transition-all duration-200 ease-in-out" :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'" @click.outside="sidebarOpen = false" @keydown.escape.window="sidebarOpen = false" x-cloak="lg">
-        
+            <div
+                id="sidebar"
+                class="flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:w-64! shrink-0 bg-white dark:bg-gray-800 shadow-xs rounded-r-2xl p-4 transition-all duration-200 ease-in-out"
+                :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'"
+                @click.outside="sidebarOpen = false"
+                @keydown.escape.window="sidebarOpen = false"
+                x-cloak="lg"
+            >
+
                 <!-- Sidebar header -->
                 <div class="flex justify-between mb-10 pr-3 sm:px-2">
                     <!-- Close button -->
@@ -60,10 +72,10 @@
                         </svg>
                     </a>
                 </div>
-        
+
                 <!-- Links -->
                 <div class="space-y-8">
-                    <!-- Pages group -->
+					<!-- Pages group -->
                     <div>
                         <h3 class="text-xs uppercase text-gray-400 dark:text-gray-500 font-semibold pl-3">
                             <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
@@ -71,11 +83,11 @@
                         </h3>
                         <ul class="mt-3">
                             <!-- Dashboard -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
+                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M5.936.278A7.983 7.983 0 0 1 8 0a8 8 0 1 1-8 8c0-.722.104-1.413.278-2.064a1 1 0 1 1 1.932.516A5.99 5.99 0 0 0 2 8a6 6 0 1 0 6-6c-.53 0-1.045.076-1.548.21A1 1 0 1 1 5.936.278Z" />
                                                 <path d="M6.068 7.482A2.003 2.003 0 0 0 8 10a2 2 0 1 0-.518-3.932L3.707 2.293a1 1 0 0 0-1.414 1.414l3.775 3.775Z" />
                                             </svg> 
@@ -92,32 +104,32 @@
                                 <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                     <ul class="pl-8 mt-1" :class="open ? 'block!' : 'hidden'">
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="index.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="dashboard_main.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Main</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="analytics.html">
+                                            <a class="block text-violet-500 transition truncate" href="dashboard_analytics.html">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Analytics</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="fintech.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fintech</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Partner Dashboard</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <!-- E-Commerce -->
+                            <!-- Expert Advisors -->
                             <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
                                 <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
                                             <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M9 6.855A3.502 3.502 0 0 0 8 0a3.5 3.5 0 0 0-1 6.855v1.656L5.534 9.65a3.5 3.5 0 1 0 1.229 1.578L8 10.267l1.238.962a3.5 3.5 0 1 0 1.229-1.578L9 8.511V6.855ZM6.5 3.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm4.803 8.095c.005-.005.01-.01.013-.016l.012-.016a1.5 1.5 0 1 1-.025.032ZM3.5 11c.474 0 .897.22 1.171.563l.013.016.013.017A1.5 1.5 0 1 1 3.5 11Z" />
-                                            </svg>    
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">E-Commerce</span>
+                                            </svg>
+                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Expert Advisors</span>
                                         </div>
                                         <!-- Icon -->
                                         <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
@@ -130,67 +142,27 @@
                                 <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                     <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="customers.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Customers</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">All Expert Advisors</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="orders.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Orders</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="invoices.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Invoices</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="shop.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Shop</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="shop-2.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Shop 2</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="product.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Single Product</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="cart.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="cart-2.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart 2</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="cart-3.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart 3</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="pay.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Pay</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">1 Expert Advisor</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <!-- Community -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]" x-data="{ open: true }">
-                                <a class="block text-gray-800 dark:text-gray-100 truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <!-- Courses -->
+                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
+                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-violet-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z" />
                                             </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Community</span>
+                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Courses</span>
                                         </div>
                                         <!-- Icon -->
                                         <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
@@ -203,49 +175,19 @@
                                 <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                     <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="users-tabs.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Users - Tabs</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">All Courses</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="users-tiles.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Users - Tiles</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="profile.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Profile</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="feed.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Feed</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="forum.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Forum</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="forum-post.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Forum - Post</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="meetups.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-violet-500 transition truncate" href="meetups-post.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups - Post</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">1 Course - Title</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <!-- Finance -->
+                            <!-- Marketplace -->
                             <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
                                 <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
@@ -254,7 +196,7 @@
                                                 <path d="M6 0a6 6 0 0 0-6 6c0 1.077.304 2.062.78 2.912a1 1 0 1 0 1.745-.976A3.945 3.945 0 0 1 2 6a4 4 0 0 1 4-4c.693 0 1.344.194 1.936.525A1 1 0 1 0 8.912.779 5.944 5.944 0 0 0 6 0Z" />
                                                 <path d="M10 4a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-4 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" />
                                             </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Finance</span>
+                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Marketplace</span>
                                         </div>
                                         <!-- Icon -->
                                         <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
@@ -267,145 +209,17 @@
                                 <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                     <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="credit-cards.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cards</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">All Products</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="transactions.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Transactions</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="transaction-details.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Transaction Details</span>
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
+                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">1 Product - title</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <!-- Job Board -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M6.753 2.659a1 1 0 0 0-1.506-1.317L2.451 4.537l-.744-.744A1 1 0 1 0 .293 5.207l1.5 1.5a1 1 0 0 0 1.46-.048l3.5-4ZM6.753 10.659a1 1 0 1 0-1.506-1.317l-2.796 3.195-.744-.744a1 1 0 0 0-1.414 1.414l1.5 1.5a1 1 0 0 0 1.46-.049l3.5-4ZM8 4.5a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1ZM9 11.5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z" />
-                                            </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Job Board</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                            <svg class="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500" :class="open ? 'rotate-180' : 'rotate-0'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                                    <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="job-listing.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Listing</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="job-post.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Job Post</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="company-profile.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Company Profile</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Tasks -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M7.586 9H1a1 1 0 1 1 0-2h6.586L6.293 5.707a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L7.586 9ZM3.075 4.572a1 1 0 1 1-1.64-1.144 8 8 0 1 1 0 9.144 1 1 0 0 1 1.64-1.144 6 6 0 1 0 0-6.856Z" />
-                                            </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tasks</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                            <svg class="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500" :class="open ? 'rotate-180' : 'rotate-0'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                                    <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="tasks-kanban.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Kanban</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="tasks-list.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">List</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Messages -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="messages.html">
-                                    <div class="flex items-center justify-between">
-                                        <div class="grow flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M13.95.879a3 3 0 0 0-4.243 0L1.293 9.293a1 1 0 0 0-.274.51l-1 5a1 1 0 0 0 1.177 1.177l5-1a1 1 0 0 0 .511-.273l8.414-8.414a3 3 0 0 0 0-4.242L13.95.879ZM11.12 2.293a1 1 0 0 1 1.414 0l1.172 1.172a1 1 0 0 1 0 1.414l-8.2 8.2-3.232.646.646-3.232 8.2-8.2Z" />
-                                                <path d="M10 14a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z" />
-                                            </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Messages</span>
-                                        </div>
-                                        <!-- Badge -->
-                                        <div class="flex shrink-0 ml-2">
-                                            <span class="inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-violet-400 px-2 rounded-sm">4</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <!-- Inbox -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="inbox.html">
-                                    <div class="flex items-center">
-                                        <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" />
-                                        </svg>
-                                        <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Inbox</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <!-- Calendar -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="calendar.html">
-                                    <div class="flex items-center">
-                                        <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z" />
-                                            <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4ZM2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Z" />
-                                        </svg> 
-                                        <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Calendar</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <!-- Campaigns -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="campaigns.html">
-                                    <div class="flex items-center">
-                                        <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M6.649 1.018a1 1 0 0 1 .793 1.171L6.997 4.5h3.464l.517-2.689a1 1 0 1 1 1.964.378L12.498 4.5h2.422a1 1 0 0 1 0 2h-2.807l-.77 4h2.117a1 1 0 1 1 0 2h-2.501l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H5.46l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H1a1 1 0 1 1 0-2h2.807l.77-4H2.46a1 1 0 0 1 0-2h2.5l.518-2.689a1 1 0 0 1 1.17-.793ZM9.307 10.5l.77-4H6.612l-.77 4h3.464Z" />
-                                        </svg>
-                                        <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Campaigns</span>
-                                    </div>
-                                </a>
                             </li>
                             <!-- Settings -->
                             <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
@@ -428,82 +242,33 @@
                                 <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                                     <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="settings.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">My Account</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="notifications.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">My Notifications</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="connected-apps.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="connected-#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Connected Apps</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="plans.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Plans</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="billing.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Billing & Invoices</span>
                                             </a>
                                         </li>
                                         <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="feedback.html">
+                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#">
                                                 <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Give Feedback</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Utility -->
-                            <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white truncate transition" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M14.75 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM14.75 16a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM2.5 14.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM1.25 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" />
-                                                <path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2ZM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" />
-                                            </svg>
-                                            <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Utility</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex shrink-0 ml-2 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                            <svg class="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500" :class="open ? 'rotate-180' : 'rotate-0'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                                    <ul class="pl-8 mt-1 hidden" :class="open ? 'block!' : 'hidden'">
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="changelog.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Changelog</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="roadmap.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Roadmap</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="faqs.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">FAQs</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="empty-state.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Empty State</span>
-                                            </a>
-                                        </li>
-                                        <li class="mb-1 last:mb-0">
-                                            <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="404.html">
-                                                <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">404</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -522,7 +287,7 @@
                             <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0" x-data="{ open: false }">
                                 <a class="block text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white transition" :class="open && 'hover:text-gray-200'" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
+                                        <div class="flex items-center">                                            
                                             <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M11.442 4.576a1 1 0 1 0-1.634-1.152L4.22 11.35 1.773 8.366A1 1 0 1 0 .227 9.634l3.281 4a1 1 0 0 0 1.59-.058l6.344-9ZM15.817 4.576a1 1 0 1 0-1.634-1.152l-5.609 7.957a1 1 0 0 0-1.347 1.453l.656.8a1 1 0 0 0 1.59-.058l6.344-9Z" />
                                             </svg>
@@ -563,7 +328,7 @@
                                         <div class="flex items-center">
                                             <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M6.668.714a1 1 0 0 1-.673 1.244 6.014 6.014 0 0 0-4.037 4.037 1 1 0 1 1-1.916-.571A8.014 8.014 0 0 1 5.425.041a1 1 0 0 1 1.243.673ZM7.71 4.709a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM9.995.04a1 1 0 1 0-.57 1.918 6.014 6.014 0 0 1 4.036 4.037 1 1 0 0 0 1.917-.571A8.014 8.014 0 0 0 9.995.041ZM14.705 8.75a1 1 0 0 1 .673 1.244 8.014 8.014 0 0 1-5.383 5.384 1 1 0 0 1-.57-1.917 6.014 6.014 0 0 0 4.036-4.037 1 1 0 0 1 1.244-.673ZM1.958 9.424a1 1 0 0 0-1.916.57 8.014 8.014 0 0 0 5.383 5.384 1 1 0 0 0 .57-1.917 6.014 6.014 0 0 1-4.037-4.037Z" />
-                                            </svg>
+                                            </svg>                                            
                                             <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Onboarding</span>
                                         </div>
                                         <!-- Icon -->
@@ -690,7 +455,7 @@
                         </ul>
                     </div>
                 </div>
-        
+
                 <!-- Expand / collapse button -->
                 <div class="pt-3 hidden lg:inline-flex 2xl:hidden justify-end mt-auto">
                     <div class="w-12 pl-4 pr-3 py-2">
@@ -698,11 +463,11 @@
                             <span class="sr-only">Expand / collapse sidebar</span>
                             <svg class="shrink-0 fill-current text-gray-400 dark:text-gray-500 sidebar-expanded:rotate-180" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path d="M15 16a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1ZM8.586 7H1a1 1 0 1 0 0 2h7.586l-2.793 2.793a1 1 0 1 0 1.414 1.414l4.5-4.5A.997.997 0 0 0 12 8.01M11.924 7.617a.997.997 0 0 0-.217-.324l-4.5-4.5a1 1 0 0 0-1.414 1.414L8.586 7M12 7.99a.996.996 0 0 0-.076-.373Z" />
-                            </svg>
+                            </svg>                            
                         </button>
                     </div>
                 </div>
-        
+
             </div>
         </div>
 
@@ -742,7 +507,7 @@
                                 <button
                                     class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-full"
                                     :class="{ 'bg-gray-200 dark:bg-gray-800': searchOpen }"
-                                    @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
+                                    @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus();});"
                                     aria-controls="search-modal"
                                 >
                                     <span class="sr-only">Search</span>
@@ -1062,317 +827,224 @@
             </header>
             
             <main class="grow">
-                <div class="px-4 sm:px-6 lg:px-8 py-8 w-full">
+                <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto">
 
-                    <!-- Page content -->
-                    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
-
-                        <!-- Content -->
-                        <div class="grow">
-                            <div class="space-y-6">
-                                <!-- Item 1 -->
-                                <div>
-                                    <a class="btn-sm px-3 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300" href="dashboard_expert_advisors_index.html">
-                                        <svg class="fill-current text-gray-400 dark:text-gray-500 mr-2" width="7" height="12" viewBox="0 0 7 12">
-                                            <path d="M5.4.6 6.8 2l-4 4 4 4-1.4 1.4L0 6z" />
-                                        </svg>
-                                        <span>Volver a sistemas</span>
-                                    </a>
-                                </div>
-                                <!-- Item 2 -->
-                                <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
-                                    <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                                        <!-- Header: Left side -->
-                                        <div>
-                                            <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Expert Advisor</div>
-                                            <h1 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">Atlas Core EA</h1>
-                                            <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-3">Descripcion detallada</div>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                                                Atlas Core EA combina filtros de volatilidad, control de riesgo por ciclo y gestion escalonada para proteger el capital.
-                                            </p>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
-                                                El sistema busca consistencia en rangos y tendencias, limita la exposicion en eventos de alto impacto y prioriza salidas seguras.
-                                            </p>
-                                        </div>
-                                        <!-- Header: Right side -->
-                                        <div class="flex flex-wrap items-center gap-2 text-xs">
-                                            <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">EA ID: ATLAS-CORE</span>
-                                            <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Tipo: EA Robot</span>
-                                            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200 font-medium px-2.5 py-1">Licencia: Activa</span>
-                                            <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Tiers: Starter, Pro, Elite</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Section 1: Performance -->
-                                    <div class="mt-6 grid gap-4 lg:grid-cols-3">
-                                        <div class="lg:col-span-2">
-                                            <!-- Section 1: Chart -->
-                                            <div class="bg-gray-50 dark:bg-gray-900/40 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
-                                                <div class="flex items-center justify-between">
-                                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">PnL diario</div>
-                                                    <div class="text-xs text-gray-500 dark:text-gray-400">Ultimos 30 dias</div>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <!-- Chart built with Chart.js 3 -->
-                                                    <!-- Check out src/js/fintech-charts.js for config -->
-                                                    <canvas id="ea-show-pnl" width="560" height="180"></canvas>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Section 1: KPIs -->
-                                        <div class="space-y-3">
-                                            <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-3">
-                                                <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">PnL 7d</div>
-                                                <div class="mt-1 text-sm font-semibold text-emerald-600 dark:text-emerald-400">+USD 280</div>
-                                                <div class="text-xs text-gray-500 dark:text-gray-400">4 dias positivos</div>
-                                            </div>
-                                            <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-3">
-                                                <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">PnL 30d</div>
-                                                <div class="mt-1 text-sm font-semibold text-emerald-600 dark:text-emerald-400">+USD 1,240</div>
-                                                <div class="text-xs text-gray-500 dark:text-gray-400">Promedio +USD 41/dia</div>
-                                            </div>
-                                            <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-3">
-                                                <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Cuentas conectadas</div>
-                                                <div class="mt-1 text-sm font-semibold text-gray-700 dark:text-gray-200">3</div>
-                                                <div class="text-xs text-gray-500 dark:text-gray-400">2 reales, 1 demo</div>
-                                            </div>
-                                            <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-3">
-                                                <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Drawdown</div>
-                                                <div class="mt-1 text-sm font-semibold text-gray-700 dark:text-gray-200">-4.2%</div>
-                                                <div class="text-xs text-gray-500 dark:text-gray-400">Maximo 12 dias</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Section 1: Guide -->
-                                    <div class="mt-6 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
-                                        <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Guia rapida</div>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                                            Flujo recomendado para instalar, activar y validar el EA antes de operar.
-                                        </p>
-                                        <ol class="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-300 list-decimal list-inside">
-                                            <li>Descarga el paquete y copia los archivos en MT5.</li>
-                                            <li>Activa la licencia desde el panel del EA.</li>
-                                            <li>Conecta un broker y define el perfil de riesgo.</li>
-                                            <li>Ejecuta una verificacion rapida en demo.</li>
-                                            <li>Inicia operativa y monitorea resultados.</li>
-                                        </ol>
-                                    </div>
-
-                                    <!-- Section 1: Empty state -->
-                                    <div class="mt-6 border border-dashed border-gray-200 dark:border-gray-700/60 rounded-lg p-4 bg-gray-50 dark:bg-gray-900/40">
-                                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                                            <div>
-                                                <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Aun sin cuentas conectadas</div>
-                                                <p class="text-sm text-gray-500 dark:text-gray-400">Conecta un broker para empezar a ver resultados y reportes.</p>
-                                            </div>
-                                            <a class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" href="#0">Ver planes</a>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- Item 3 -->
-                                <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
-                                    <div class="flex items-start justify-between gap-4">
-                                        <div>
-                                            <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Add-ons</div>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                                                Accesorios para complementar el sistema y mejorar la operativa.
-                                            </p>
-                                        </div>
-                                        <a class="btn bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600" href="dashboard_marketplace_index.html">Ver en marketplace</a>
-                                    </div>
-                                    <div class="mt-4 grid gap-4 sm:grid-cols-2">
-                                        <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-4">
-                                            <div class="flex items-start justify-between gap-2">
-                                                <div>
-                                                    <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">Trend Filter</div>
-                                                    <div class="text-xs text-gray-500 dark:text-gray-400">Indicador de tendencia</div>
-                                                </div>
-                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 text-xs font-medium px-2.5 py-1">Pago unico</span>
-                                            </div>
-                                            <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-                                                Filtra entradas con confirmacion multi-timeframe.
-                                            </p>
-                                            <div class="mt-4 text-sm font-semibold text-gray-800 dark:text-gray-100">USD 29</div>
-                                        </div>
-                                        <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-4">
-                                            <div class="flex items-start justify-between gap-2">
-                                                <div>
-                                                    <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">News Guard</div>
-                                                    <div class="text-xs text-gray-500 dark:text-gray-400">Filtro de noticias</div>
-                                                </div>
-                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 text-xs font-medium px-2.5 py-1">Pago unico</span>
-                                            </div>
-                                            <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-                                                Pausa operaciones en eventos de alto impacto.
-                                            </p>
-                                            <div class="mt-4 text-sm font-semibold text-gray-800 dark:text-gray-100">USD 19</div>
-                                        </div>
-                                        <div class="rounded-lg border border-gray-100 dark:border-gray-700/60 p-4">
-                                            <div class="flex items-start justify-between gap-2">
-                                                <div>
-                                                    <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">Risk Toolkit</div>
-                                                    <div class="text-xs text-gray-500 dark:text-gray-400">Herramientas de riesgo</div>
-                                                </div>
-                                                <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 text-xs font-medium px-2.5 py-1">Suscripcion</span>
-                                            </div>
-                                            <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-                                                Panel de control con limites diarios y alertas.
-                                            </p>
-                                            <div class="mt-4 text-sm font-semibold text-gray-800 dark:text-gray-100">USD 9/mes</div>
-                                        </div>
-                                    </div>
-                                </article>
+                    <!-- Page header -->
+                    <div class="sm:flex sm:justify-between sm:items-center mb-5">
+                    
+                        <!-- Left: Title -->
+                        <div class="mb-4 sm:mb-0">
+                            <div class="mb-6">
+                                <a class="btn-sm px-3 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300" href="meetups.html">
+                                    <svg class="fill-current text-gray-400 dark:text-gray-500 mr-2" width="7" height="12" viewBox="0 0 7 12">
+                                        <path d="M5.4.6 6.8 2l-4 4 4 4-1.4 1.4L0 6z" />
+                                    </svg>
+                                    <span>Regresar a Expert Advisors</span>
+                                </a>
                             </div>
                         </div>
-                        <!-- Sidebar -->
-                        <aside class="mt-6 lg:mt-0 lg:w-80 space-y-6">
+                    
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="grid grid-cols-12 gap-6">
+                        <!-- Main column -->
+                        <div class="col-span-full xl:col-span-8 flex flex-col gap-6">
                             <!-- Item 1 -->
-                        <!--  Line chart (Active Users Right Now) -->
-                        <div class="flex flex-col col-span-full xl:col-span-4 bg-white dark:bg-gray-800 shadow-xs rounded-xl">
-                            <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60">
-                                <h2 class="font-semibold text-gray-800 dark:text-gray-100">Active Users Right Now</h2>
-                            </header>
-                            <!-- Card content -->
-                            <div class="flex flex-col h-full">
-                                <!-- Live visitors number -->
-                                <div class="px-5 py-3">
-                                    <div class="flex items-center">
-                                        <!-- Red dot -->
-                                        <div class="relative flex items-center justify-center w-3 h-3 mr-3" aria-hidden="true">
-                                            <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-50"></div>
-                                            <div class="relative inline-flex rounded-full w-1.5 h-1.5 bg-red-500"></div>
-                                        </div>
-                                        <!-- Vistors number -->
-                                        <div>
-                                            <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">347</div>
-                                            <div class="text-sm text-gray-500 dark:text-gray-400">Live visitors</div>
-                                        </div>
+                            <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                                <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                                    <!-- Header: Left side -->
+                                    <div>
+                                        <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Informacion del sistema</div>
+                                        <h2 class="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">Atlas Core EA</h2>
+                                        <div class="text-sm font-semibold text-gray-700 dark:text-gray-200 mt-3">Descripcion detallada</div>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                            Atlas Core EA es un sistema automatizado enfocado en ejecucion consistente, control de riesgo por cuenta y reglas estables de operativa. 
+                                        </p>
+                                    </div>
+                                    <!-- Header: Right side -->
+                                    <div class="flex flex-wrap items-center gap-2 text-xs">
+                                        <!-- Status: swap text/class to "Sistema bloqueado" when no access -->
+                                        <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 font-medium px-2.5 py-1">Sistema activo</span>
+                                        <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 font-medium px-2.5 py-1">Tipo: EA Robot</span>
                                     </div>
                                 </div>
 
+                                <!-- Section: System details -->
+                                <div class="mt-6 border border-gray-100 dark:border-gray-700/60 rounded-lg p-4">
+                                    <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">Detalles del sistema</div>
+                                    <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-gray-500 dark:text-gray-400">Tiers permitidos</span>
+                                            <span class="font-medium text-gray-800 dark:text-gray-100">Starter, Pro, Elite</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-gray-500 dark:text-gray-400">Trial habilitado</span>
+                                            <span class="font-medium text-gray-800 dark:text-gray-100">No</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-gray-500 dark:text-gray-400">Guia EN</span>
+                                            <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-gray-500 dark:text-gray-400">Guia ES</span>
+                                            <span class="font-medium text-gray-800 dark:text-gray-100">Disponible</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-gray-500 dark:text-gray-400">Archivo EA</span>
+                                            <span class="font-medium text-gray-800 dark:text-gray-100">Bundle activo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Item 3 -->
+                            <!-- Line chart (Portfolio Returns) -->
+                            <div class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl">
+                                <!-- Header: Title -->
+                                <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+                                    <h2 class="font-semibold text-gray-800 dark:text-gray-100">Ultimos ingresos del sistema</h2>
+                                </header>
+                                <div class="px-5 py-3">
+                                    <div class="flex flex-wrap justify-between items-end gap-y-2 gap-x-4">
+                                        <div class="flex items-center">
+                                            <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">$1,284.60</div>
+                                            <div class="text-sm text-gray-500 dark:text-gray-400"><span class="font-medium text-gray-800 dark:text-gray-100">USD 62.4</span> promedio diario</div>
+                                        </div>
+                                        <div id="fintech-card-01-legend" class="grow mb-1">
+                                            <ul class="flex flex-wrap gap-x-4 sm:justify-end"></ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- Chart built with Chart.js 3 -->
-                                <!-- Check out src/js/analytics-charts.js for config -->
+                                <!-- Check out src/js/fintech-charts.js for config -->
+                                <div class="grow">
+                                    <!-- Change the height attribute to adjust the chart height -->
+                                    <canvas id="fintech-card-01" width="800" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar column -->
+                        <div class="col-span-full xl:col-span-4 flex flex-col gap-6">
+                            <!-- Item 2 -->
+                            <article class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-4">
+                                <!-- Header: Title -->
+                                <div class="flex items-center justify-between">
+                                    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Guia del sistema</h2>
+                                </div>
+                                <!-- Section: Guide -->
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                    Guia general para instalacion, configuracion y validacion del EA.
+                                </p>
+                                <!-- Section: Actions -->
+                                <div class="mt-2 grid gap-2 sm:grid-cols-2">
+                                    <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">Ver guia</button>
+                                    <button class="btn bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600" type="button">Descargar paquete</button>
+                                </div>
+                            </article>
+
+                            <!-- Item 4 -->
+                            <!-- Visible solo cuando el sistema esta activo -->
+                            <div class="flex flex-col bg-white dark:bg-gray-800 shadow-xs rounded-xl p-4">
+                                <!-- Header: Title -->
+                                <div class="flex items-center justify-between">
+                                    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Licencia del sistema</h2>
+                                    <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 text-xs font-medium px-2.5 py-1">Activa</span>
+                                </div>
+                                <!-- Section: Summary -->
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                    Licencia activadora, colocar en el sistema para el funcionamiento.
+                                </p>
+                                <!-- Section: License key -->
+                                <div class="mt-2">
+                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Clave completa</div>
+                                    <div class="mt-0.5 font-mono text-sm text-gray-800 dark:text-gray-100">EA-2894-7712-5530-9032</div>
+                                    <div class="mt-2">
+                                        <button
+                                            class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700/60 text-gray-600 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
+                                            type="button"
+                                            x-data="{
+                                                copied: false,
+                                                license: 'EA-2894-7712-5530-9032',
+                                                timeoutId: null,
+                                                copyLicense() {
+                                                    if (navigator.clipboard) {
+                                                        navigator.clipboard.writeText(this.license).catch(() => {});
+                                                    }
+                                                    this.copied = true;
+                                                    clearTimeout(this.timeoutId);
+                                                    this.timeoutId = setTimeout(() => this.copied = false, 4000);
+                                                }
+                                            }"
+                                            @click="copyLicense()"
+                                            aria-live="polite"
+                                        >
+                                            <span x-text="copied ? 'Copiado' : 'Copiar licencia'"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                                                    <!-- Pie chart (Portfolio Value) -->
+                        <div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white dark:bg-gray-800 shadow-xs rounded-xl">
+                            <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+                                <h2 class="font-semibold text-gray-800 dark:text-gray-100">Distribucion de balance</h2>
+                            </header>
+                            <div class="px-5 py-3">
+                                <div class="text-sm italic mb-2">Balance combinado de cuentas:</div>
+                                <div class="text-3xl font-bold text-gray-800 dark:text-gray-100">$12,480.75</div>
+                            </div>
+                            <!-- Chart built with Chart.js 3 -->
+                            <!-- Check out src/js/fintech-charts.js for config -->
+                            <div class="grow flex flex-col justify-center">
                                 <div>
                                     <!-- Change the height attribute to adjust the chart height -->
-                                    <canvas id="analytics-card-02" width="389" height="70"></canvas>
+                                    <canvas id="fintech-card-09" width="389" height="220"></canvas>
                                 </div>
-
-                                <!-- Table -->
-                                <div class="grow px-5 pt-3 pb-1">
-                                    <div class="overflow-x-auto">
-                                        <table class="table-auto w-full dark:text-gray-300">
-                                            <!-- Table header -->
-                                            <thead class="text-xs uppercase text-gray-400 dark:text-gray-500">
-                                                <tr>
-                                                    <th class="py-2">
-                                                        <div class="font-semibold text-left">Top pages</div>
-                                                    </th>
-                                                    <th class="py-2">
-                                                        <div class="font-semibold text-right">Active users</div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <!-- Table body -->
-                                            <tbody class="text-sm divide-y divide-gray-100 dark:divide-gray-700/60">
-                                                <!-- Row -->
-                                                <tr>
-                                                    <td class="py-2">
-                                                        <div class="text-left">preview.cruip.com/open-pro/</div>
-                                                    </td>
-                                                    <td class="py-2">
-                                                        <div class="font-medium text-right text-gray-800">94</div>
-                                                    </td>
-                                                </tr>
-                                                <!-- Row -->
-                                                <tr>
-                                                    <td class="py-2">
-                                                        <div class="text-left">preview.cruip.com/simple/</div>
-                                                    </td>
-                                                    <td class="py-2">
-                                                        <div class="font-medium text-right text-gray-800">42</div>
-                                                    </td>
-                                                </tr>
-                                                <!-- Row -->
-                                                <tr>
-                                                    <td class="py-2">
-                                                        <div class="text-left">cruip.com/unlimited/</div>
-                                                    </td>
-                                                    <td class="py-2">
-                                                        <div class="font-medium text-right text-gray-800">12</div>
-                                                    </td>
-                                                </tr>
-                                                <!-- Row -->
-                                                <tr>
-                                                    <td class="py-2">
-                                                        <div class="text-left">preview.cruip.com/twist/</div>
-                                                    </td>
-                                                    <td class="py-2">
-                                                        <div class="font-medium text-right text-gray-800">4</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <!-- Card footer -->
-                                <div class="text-right px-5 pb-4">
-                                    <a class="text-sm font-medium text-violet-500 hover:text-violet-600 dark:hover:text-violet-400" href="#0">Real-Time Report -&gt;</a>
+                                <div id="fintech-card-09-legend" class="px-5 py-4">
+                                    <ul class="flex flex-wrap justify-center -m-1"></ul>
                                 </div>
                             </div>
                         </div>
-                            <!-- Item 2 -->
-                            <div class="bg-white dark:bg-gray-800 shadow-xs rounded-xl p-4">
-                                <!-- License: Header -->
-                                <div class="flex items-center justify-between gap-2">
-                                    <div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wide">Licencia</div>
-                                    <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200 text-xs font-medium px-2.5 py-1">Activa</span>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <article class="col-span-full bg-white dark:bg-gray-800 shadow-xs rounded-xl p-6">
+                            <!-- Header: Title -->
+                            <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Adons del EA</h2>
+                            <!-- Section: Progreso de Adons -->
+                            <div class="mt-4">
+                                <div class="flex items-center justify-between">
+                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Progreso de Adons</div>
+                                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400">2/3</div>
                                 </div>
-                                <!-- License: Key -->
-                                <div class="mt-3">
-                                    <div class="text-xs uppercase text-gray-400 dark:text-gray-500 tracking-wide">Clave completa</div>
-                                    <div class="mt-1 font-mono text-sm text-gray-800 dark:text-gray-100">EA-2894-7712-5530-9032</div>
+                                <div class="mt-2 w-full h-2 bg-gray-100 dark:bg-gray-700/60 rounded-full">
+                                    <div class="h-2 rounded-full bg-violet-500" style="width: 67%;"></div>
                                 </div>
-                                <div class="mt-3 grid gap-2 text-xs text-gray-500 dark:text-gray-400">
-                                    <div class="flex items-center justify-between gap-2">
-                                        <span>Intervalo</span>
-                                        <span class="text-gray-700 dark:text-gray-200">Mensual</span>
-                                    </div>
-                                    <div class="flex items-center justify-between gap-2">
-                                        <span>Expira</span>
-                                        <span class="text-gray-700 dark:text-gray-200">21 Feb 2026</span>
-                                    </div>
-                                    <div class="flex items-center justify-between gap-2">
-                                        <span>Ultima sync</span>
-                                        <span class="text-gray-700 dark:text-gray-200">Hace 2 horas</span>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <button
-                                        class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700/60 text-gray-600 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
-                                        type="button"
-                                        x-data="{
-                                            copied: false,
-                                            license: 'EA-2894-7712-5530-9032',
-                                            timeoutId: null,
-                                            copyLicense() {
-                                                if (navigator.clipboard) {
-                                                    navigator.clipboard.writeText(this.license).catch(() => {});
-                                                }
-                                                this.copied = true;
-                                                clearTimeout(this.timeoutId);
-                                                this.timeoutId = setTimeout(() => this.copied = false, 4000);
-                                            }
-                                        }"
-                                        @click="copyLicense()"
-                                        aria-live="polite"
-                                    >
-                                        <span x-text="copied ? 'Copiado' : 'Copiar licencia'"></span>
-                                    </button>
-                                </div>
+                                <!-- Section: List -->
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Indicador Trend Filter</span>
+                                        <button class="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" type="button">
+                                            Adquirir
+                                        </button>
+                                    </li>
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Guia de optimizacion</span>
+                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
+                                            Adquirido
+                                        </button>
+                                    </li>
+                                    <li class="flex items-center justify-between gap-3">
+                                        <span class="text-sm text-gray-700 dark:text-gray-400">Plantilla de gestion de riesgo</span>
+                                        <button class="inline-flex items-center justify-center text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700/60 text-gray-400 dark:text-gray-500" type="button" disabled>
+                                            Adquirido
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
-                        </aside>
+                        </article>
 
                     </div>
 
@@ -1385,7 +1057,14 @@
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/main.js"></script>
+    <script src="./js/vendors/chart.js"></script>
+    <script src="./js/vendors/moment.js"></script>
+    <script src="./js/vendors/chartjs-adapter-moment.js"></script>
+    <script src="./js/fintech-charts.js"></script>
+    <script src="./js/vendors/flatpickr.js"></script>
+    <script src="./js/flatpickr-init.js"></script>
 
 </body>
 
 </html>
+
